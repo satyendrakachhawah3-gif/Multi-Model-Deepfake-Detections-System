@@ -1,0 +1,54 @@
+.venv/
+
+# Large datasets and artifacts
+data/
+
+text_results/
+outputs/
+logs/
+temp_downloads/
+anaconda_projects/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+Test_Image/
+Test_Image_Synth/
+Test_Video_Synth/
+.venv-1/
+tests/
+
+scripts/
+vedio_data/
+test_vedio/
+Test_text/
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Notebook generated artifacts
+.ipynb_checkpoints/
+notebooks/models/
+notebooks/logs/
+notebooks/text_results/
+
+# Training/evaluation generated artifacts
+*.tfevents.*
+*.tmp
+
+# Local downloaded model weights (keep out of git history)
+.env
+models/
+models.zip
+
+# Local temporary benchmarking artifacts
+Test_Image_UI/
+temp_benchmark_image_models.py
+temp_benchmark*.py
+
+# Generated and working documentation assets
+docs/
+
+
+
