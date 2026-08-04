@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeepFake Detection | Decision Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="page-dashboard">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span class="brand-text">DeepFake Detection</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Overview</a>
+        <a href="analysis.html">Analyze</a>
+        <a class="active" href="dashboard.html">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel verdict-panel reveal">
+      <div>
+        <p class="eyebrow">Final Decision</p>
+        <h1 id="overallVerdict" class="verdict">N/A</h1>
+        <p id="overallConfidence" class="muted">Confidence: --</p>
+      </div>
+      <div class="actions">
+        <a class="btn ghost" href="analysis.html">Back To Analysis</a>
+        <button id="downloadBtn" class="btn" type="button">Download Report</button>
+      </div>
+    </section>
+
+    <section class="dashboard-grid reveal">
+      <article class="panel">
+        <h2>Modality Metrics</h2>
+
+        <div class="metric" id="metricText">
+          <div class="metric-label">
+            <span>Text probability (FAKE)</span>
+            <strong id="textScoreLabel">--</strong>
+          </div>
+          <div class="bar"><span id="textBar"></span></div>
+        </div>
+
+        <div class="metric" id="metricImage">
+          <div class="metric-label">
+            <span>Image probability (FAKE)</span>
+            <strong id="imageScoreLabel">--</strong>
+          </div>
+          <div class="bar"><span id="imageBar"></span></div>
+        </div>
+
+        <div class="metric" id="metricVideo">
+          <div class="metric-label">
+            <span>Video probability (FAKE)</span>
+            <strong id="videoScoreLabel">--</strong>
+          </div>
+          <div class="bar"><span id="videoBar"></span></div>
+        </div>
+      </article>
+
+      <article class="panel">
+        <h2>Evidence Trace</h2>
+        <ul id="insightsList" class="summary-list"></ul>
+        <div id="requestMeta" class="meta-box"></div>
+      </article>
+    </section>
+
+    <section class="panel reveal">
+      <h2>Confusion Matrices</h2>
+      <div class="cm-grid">
+        <article class="cm-card">
+          <h3>Text Model</h3>
+          <div id="cmText" class="cm-wrap"></div>
+        </article>
+        <article class="cm-card">
+          <h3>Image Model</h3>
+          <div id="cmImage" class="cm-wrap"></div>
+        </article>
+        <article class="cm-card">
+          <h3>Video Model</h3>
+          <div id="cmVideo" class="cm-wrap"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="config.js?v=20260517"></script>
+  <script src="script.js?v=20260517-4"></script>
+</body>
+
+</html>
