@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeepFake Detection | Live Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="page-analysis">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span class="brand-text">DeepFake Detection</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Overview</a>
+        <a class="active" href="analysis.html">Analyze</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel reveal">
+      <div class="panel-header">
+        <h1>Run Multimodal Inference</h1>
+        <p class="muted">
+          Each selected modality calls the model API independently, then the
+          frontend computes a blended final verdict.
+        </p>
+      </div>
+
+      <div class="settings-grid">
+        <div class="note-box">
+          <strong>API contract:</strong>
+          <span>
+            Endpoint <code>/analyze</code> accepts one modality per request.
+            This UI orchestrates text, image, and video requests for you.
+          </span>
+        </div>
+      </div>
+
+      <div class="choice-row" aria-label="Select modalities">
+        <label class="choice">
+          <input id="useTextChoice" type="checkbox" checked />
+          <span>Text</span>
+        </label>
+        <label class="choice">
+          <input id="useImageChoice" type="checkbox" checked />
+          <span>Image</span>
+        </label>
+        <label class="choice">
+          <input id="useVideoChoice" type="checkbox" checked />
+          <span>Video</span>
+        </label>
+      </div>
+
+      <div class="analysis-grid">
+        <article class="panel input-card">
+          <h3>Text Signal</h3>
+          <label class="field" for="textInput">
+            <span>Text content</span>
+            <textarea id="textInput" placeholder="Paste transcript, headline, caption, or claim text."></textarea>
+          </label>
+        </article>
+
+        <article class="panel input-card">
+          <h3>Image Signal</h3>
+          <label class="field" for="imageInput">
+            <span>Image file</span>
+            <input id="imageInput" type="file" accept="image/*" />
+          </label>
+          <div id="imagePreview" class="preview">No image selected.</div>
+        </article>
+
+        <article class="panel input-card">
+          <h3>Video Signal</h3>
+          <label class="field" for="videoInput">
+            <span>Video file</span>
+            <input id="videoInput" type="file" accept="video/*" />
+          </label>
+          <div id="videoPreview" class="preview">No video selected.</div>
+        </article>
+      </div>
+
+      <div class="actions">
+        <button id="runAnalysisBtn" class="btn">Run Model Analysis</button>
+        <button id="clearBtn" class="btn ghost" type="button">Clear Inputs</button>
+        <a id="viewDashboardBtn" class="btn ghost" href="dashboard.html">View Dashboard</a>
+      </div>
+
+      <div id="statusMessage" class="status-banner info" aria-live="polite">
+        Ready to run inference.
+      </div>
+      <div id="analysisQuickResult" class="quick-result" hidden></div>
+    </section>
+  </main>
+
+  <script src="config.js?v=20260517"></script>
+  <script src="script.js?v=20260517-4"></script>
+</body>
+
+</html>
