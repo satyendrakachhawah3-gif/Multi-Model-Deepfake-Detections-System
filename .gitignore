@@ -1,0 +1,13 @@
+.venv/
+DeepFake-main/.venv/
+DeepFake-main/.venv-1/
+DeepFake-main/data/
+DeepFake-main/models/
+DeepFake-main/outputs/
+DeepFake-main/logs/
+DeepFake-main/temp_downloads/
+**/__pycache__/
+*.py[cod]
+.env
+.DS_Store
+Thumbs.db
