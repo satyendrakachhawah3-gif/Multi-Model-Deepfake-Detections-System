@@ -18,7 +18,7 @@ Test_Video_Synth/
 .venv-1/
 tests/
 
-scripts/
+# scripts/
 vedio_data/
 test_vedio/
 Test_text/
