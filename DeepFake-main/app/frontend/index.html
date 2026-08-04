@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeepFake Detection | Multi-Modal Deepfake Detection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="page-intro">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span class="brand-text">DeepFake Detection</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="active" href="index.html">Overview</a>
+        <a href="analysis.html">Analyze</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero reveal">
+      <article class="panel hero-copy">
+        <p class="eyebrow">Operational deepfake screening platform</p>
+        <h1>Multimodal detection built for high-risk media decisions.</h1>
+        <p class="muted">
+          Run text, image, and video inference through your trained models, then
+          merge all modality outputs into a single risk verdict with
+          traceable evidence.
+        </p>
+        <div class="actions">
+          <a class="btn" href="analysis.html">Start Live Analysis</a>
+          <a class="btn ghost" href="dashboard.html">Open Results Dashboard</a>
+        </div>
+        <div class="chip-row" role="list" aria-label="Capabilities">
+          <span class="chip" role="listitem">Live API scoring</span>
+          <span class="chip" role="listitem">Multi-model fusion</span>
+          <span class="chip" role="listitem">Auditable output</span>
+        </div>
+      </article>
+
+      <aside class="panel hero-stats">
+        <article class="stat-card">
+          <h3>Modalities</h3>
+          <strong>Text + Image + Video</strong>
+          <p>Independent detector per signal type.</p>
+        </article>
+        <article class="stat-card">
+          <h3>Fusion</h3>
+          <strong>Weighted aggregation</strong>
+          <p>Blended threshold-aware final decision.</p>
+        </article>
+        <article class="stat-card">
+          <h3>Output</h3>
+          <strong>REAL / FAKE verdict</strong>
+          <p>Confidence and modality-level evidence.</p>
+        </article>
+      </aside>
+    </section>
+
+    <section class="module-grid reveal">
+      <article class="panel module-card">
+        <h3>Text Forensics</h3>
+        <p>
+          Consistency scoring and language pattern checks for narratives,
+          prompts, and article claims.
+        </p>
+      </article>
+      <article class="panel module-card">
+        <h3>Image Forensics</h3>
+        <p>
+          Vision model detects blending artifacts, identity drift, and local
+          synthesis traces.
+        </p>
+      </article>
+      <article class="panel module-card">
+        <h3>Video Forensics</h3>
+        <p>
+          Temporal consistency checks on frame-level signals and sequence
+          reliability.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <script src="config.js?v=20260517"></script>
+  <script src="script.js?v=20260517-4"></script>
+</body>
+
+</html>
